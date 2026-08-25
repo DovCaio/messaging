@@ -152,3 +152,16 @@ The two implementations will then be compared in terms of:
 - Failure handling
 
 Later stages will explore more advanced messaging patterns, including idempotency and the Outbox Pattern.
+# Learnings
+
+1. RabbitMQ vs Kafka
+    <ul>
+        <li>
+            RabbitMQ is message-queue driven. The producer sends a message to an Exchange, which performs the routing to a Queue. After the message is processed and acknowledged (ACK) by the consumer, it is usually removed from the queue. It is well suited for asynchronous processing, task distribution, work queues, and message routing.
+        </li>
+        <li>
+            Kafka is event-driven. The producer publishes events to a Topic, which is divided into Partitions to enable scalability and parallel processing. Consumers track their progress through offsets, while events remain available during a configured retention period. This allows different Consumer Groups to consume the same events independently and enables event replay.
+        </li>
+    </ul>
+
+    
