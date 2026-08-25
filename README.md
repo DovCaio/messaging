@@ -126,14 +126,14 @@ The configuration was subsequently adjusted so that the consumer could deseriali
 
 ### RabbitMQ
 
-- [ ] RabbitMQ infrastructure
-- [ ] Producer
-- [ ] Exchange
-- [ ] Queue
-- [ ] Binding
-- [ ] Routing key
-- [ ] Consumer
-- [ ] End-to-end event flow
+- [x] RabbitMQ infrastructure
+- [x] Producer
+- [x] Exchange
+- [x] Queue
+- [x] Binding
+- [x] Routing key
+- [x] Consumer
+- [x] End-to-end event flow
 
 ## Next Steps
 
