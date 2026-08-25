@@ -10,7 +10,7 @@ The laboratory starts with Apache Kafka and will later implement the same commun
 
 ## Architecture
 
-### Current Architecture — Apache Kafka
+### Apache Kafka and RabbitMQ
 
 ```text
 ┌─────────────────┐
@@ -20,7 +20,7 @@ The laboratory starts with Apache Kafka and will later implement the same commun
          │ OrderCreatedEvent
          ▼
 ┌─────────────────┐
-│      Kafka      │
+│   messaging     │
 │  orders.events  │
 └────────┬────────┘
          │
@@ -34,11 +34,11 @@ The laboratory starts with Apache Kafka and will later implement the same commun
 
 ### order-service
 
-Responsible for creating orders and publishing `OrderCreatedEvent` messages to Apache Kafka.
+Responsible for creating orders and publishing `OrderCreatedEvent` messages to the messaging.
 
 ### notification-service
 
-Responsible for consuming order creation events from Kafka and processing them as notification events.
+Responsible for consuming order creation events from messaging and processing them as notification events.
 
 ## Apache Kafka
 
@@ -75,7 +75,7 @@ The current event structure is:
 
 ## Technologies
 
-- Java 21
+- Java 17
 - Spring Boot
 - Spring Kafka
 - Apache Kafka
